@@ -1,0 +1,21 @@
+.search-bar-container {
+    .input-icon-container {
+        background-color: $dark; 
+        border: none;
+
+        .input-icon {
+            color: $blue;
+        }
+    }
+
+    .search-input-form {
+        margin-top: 10px;
+        
+         .search-input {
+             width: 80%;
+             margin: 0 auto;
+             max-width: 310px;
+             border: none;
+         }
+    }
+}

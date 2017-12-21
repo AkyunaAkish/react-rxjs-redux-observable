@@ -1,32 +1,15 @@
 {
-  "name": "react-redux-node-express-todo-list-boilerplate",
+  "name": "react-redux-observable-todo-list",
   "version": "1.0.0",
   "description": "",
-  "main": "./server/init.js",
+  "main": "./client/index.js",
   "scripts": {
-    "start": "NODE_ENV=production node ./server/init.js",
-    "client": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --progress --colors",
-    "server": "./node_modules/.bin/nodemon ./server/init.js",
-    "build": "./node_modules/.bin/webpack -p"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --progress --colors"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.17.2",
-    "compression": "^1.6.2",
-    "cookie-parser": "^1.4.3",
-    "cors": "^2.8.3",
-    "dotenv": "^4.0.0",
-    "express": "^4.15.3",
-    "knex": "^0.13.0",
-    "lodash": "^4.17.4",
-    "morgan": "^1.8.2",
-    "nodemon": "^1.11.0",
-    "pg": "^7.3.0"
-  },
   "devDependencies": {
-    "axios": "^0.17.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
     "babel-polyfill": "^6.26.0",
@@ -54,13 +37,12 @@
     "react-async-component": "^1.0.2",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^16.0.0",
-    "react-redux": "^5.0.5",
-    "react-router-dom": "^4.1.1",
+    "react-redux": "^5.0.6",
     "react-tap-event-plugin": "^3.0.2",
-    "redux": "^3.7.0",
-    "redux-form": "^7.1.2",
-    "redux-promise": "^0.5.3",
+    "redux": "^3.7.2",
+    "redux-observable": "^0.17.0",
     "resolve-url-loader": "^2.0.3",
+    "rxjs": "^5.5.5",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",
@@ -68,5 +50,8 @@
     "webpack-dev-server": "^2.5.0",
     "webpack-merge": "^4.1.0",
     "webpack-notifier": "^1.5.0"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0"
   }
 }

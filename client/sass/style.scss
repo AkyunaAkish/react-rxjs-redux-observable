@@ -1,4 +1,4 @@
 @import './global';
-@import '../components/Todos/Todos';
-@import '../components/TodosNew/TodosNew';
-@import '../components/TodoShow/TodoShow';
+@import './layout';
+@import './search-bar';
+@import './search-results';

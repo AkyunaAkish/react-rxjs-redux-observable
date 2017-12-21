@@ -1,7 +1,8 @@
 @import './variables';
 
 body {
-    background: $slate_grey;
+    background: $dark;
+    color: $blue;
 }
 
 .margin-left-sm {
@@ -14,5 +15,13 @@ body {
 
 .inline-block {
     display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
 }
 
