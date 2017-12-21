@@ -7,10 +7,14 @@ class SearchBar extends PureComponent {
         super(props);
     }
 
+    componentDidMount() {
+        $('.search-input').focus();
+    }
+
     render() {
         return (
             <div className='search-bar-container'>
-                <AppBar iconElementLeft={ 
+                <AppBar className='search-bar' iconElementLeft={ 
                     <FormGroup className='search-input-form'>
                         <InputGroup>
                             <InputGroup.Addon className='input-icon-container'>
