@@ -4,7 +4,8 @@
   "description": "",
   "main": "./client/index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --progress --colors"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --progress --colors",
+    "build": "webpack -p"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +34,7 @@
     "material-ui": "^0.19.4",
     "node-sass": "^4.5.3",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "progress-bar-webpack-plugin": "^1.10.0",
     "react": "^16.0.0",
     "react-async-component": "^1.0.2",
     "react-bootstrap": "^0.31.0",
@@ -41,6 +43,7 @@
     "react-tap-event-plugin": "^3.0.2",
     "redux": "^3.7.2",
     "redux-observable": "^0.17.0",
+    "redux-thunk": "^2.2.0",
     "resolve-url-loader": "^2.0.3",
     "rxjs": "^5.5.5",
     "sass-loader": "^6.0.6",
