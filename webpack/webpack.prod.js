@@ -11,10 +11,10 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const VENDOR_LIBS = [
-    'axios', 'bootstrap', 'bootstrap-loader', 'bootstrap-sass',
-    'es6-promise', 'jquery', 'lodash', 'react', 'react-async-component',
-    'react-bootstrap', 'react-dom', 'react-redux', 'react-router-dom',
-    'redux', 'redux-form', 'redux-promise', 'redux-thunk'
+    'bootstrap', 'bootstrap-loader', 'bootstrap-sass',
+    'jquery', 'react',
+    'react-bootstrap', 'react-dom', 'react-redux',
+    'redux', 'redux-thunk'
 ];
 
 module.exports = webpackMerge(commonConfig, {
