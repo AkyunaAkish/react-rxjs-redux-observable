@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux';
 
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
@@ -12,11 +13,11 @@ class SearchResults extends PureComponent {
         return (
             <div className='search-results-container'>
                 <Paper className='search-result-paper' zDepth={ 1 }>
-                    <h1>SearchResults</h1>
+                    { this.props.githubUsers.length ? JSON.stringify(this.props.githubUsers) : 'No Results' }
                 </Paper>
             </div>
         );
     }
 }
 
-export default SearchResults;
+export default connect(({ githubUsers }) => ({ githubUsers }))(SearchResults);

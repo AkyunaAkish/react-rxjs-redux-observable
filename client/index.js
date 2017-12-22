@@ -1,5 +1,7 @@
+import 'rxjs';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
 // Loading material-ui themes
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
@@ -14,7 +16,13 @@ import './sass/style.scss';
 
 import Layout from './components/Layout';
 
+import configureStore from './configureStore';
+
+const store = configureStore();
+
 ReactDOM.render(
   <MuiThemeProvider muiTheme={ getMuiTheme(darkBaseTheme) }>
-    <Layout/>
+    <Provider store={ store }>
+      <Layout/>
+    </Provider>
   </MuiThemeProvider>, document.querySelector('#app'));

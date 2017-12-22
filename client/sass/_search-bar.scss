@@ -1,6 +1,9 @@
 .search-bar-container {
     .search-bar {
         background-color: $blueT !important;
+        width: 100% !important;
+        position: fixed !important;
+        top: 0 !important;
 
         .input-icon-container {
             background-color: $dark; 
