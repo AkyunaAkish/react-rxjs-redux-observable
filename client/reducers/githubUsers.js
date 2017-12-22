@@ -1,15 +1,19 @@
-import { RECEIVE_USERS, CLEAR_USERS } from '../actions/types';
+import { SET_SEARCHING, RECEIVE_USERS, CLEAR_USERS } from '../actions/types';
 
-const initialState = [];
+const initialState = {
+    users: [],
+    isSearching: false
+};
 
 export default function userResults(state = initialState, action) {
     switch (action.type) {
-        case RECEIVE_USERS:
-            console.log('receive in reducer', action);
-            return action.payload.users;
+        case SET_SEARCHING:
+            return { ...state, isSearching: action.payload.bool };
+
+            case RECEIVE_USERS:
+            return { ...state, users: action.payload.users };
 
         case CLEAR_USERS:
-            console.log('clear in reducer', action);
             return initialState;
 
         default:

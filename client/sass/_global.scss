@@ -1,17 +1,12 @@
 @import './variables';
 
 body {
-    background: $dark;
     color: $blue;
     background: url('/images/padded-background-img.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-.margin-left-sm {
-    margin-left: 5px;
 }
 
 .margin-center {
