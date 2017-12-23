@@ -1,5 +1,7 @@
 # React + Redux Observable Github Search App
 
+## Live Demo: https://akyunaakish.github.io/react-redux-observable-github-search.github.io/
+
 #### Technologies Used
 ```
 React + 
