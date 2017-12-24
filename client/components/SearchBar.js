@@ -21,10 +21,10 @@ class SearchBar extends PureComponent {
 
     handleSearch(user) {
         this.setState({
-            searchLength: user.length || 0 
+            searchLength: user.trim().length || 0 
         });
         
-        if(!user || !user.length) {
+        if (!user || !user.trim().length) {
             this.props.clearUsers();
             $('.search-input').focus();
         } else {
