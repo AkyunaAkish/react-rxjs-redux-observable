@@ -13,6 +13,7 @@ Redux-Form 6 +
 SCSS + 
 Webpack 2 +
 NodeJS 
+GitHub API
 ```
 
 ## To run locally:
