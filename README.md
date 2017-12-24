@@ -22,6 +22,7 @@ GitHub API
 $ git clone https://github.com/AkyunaAkish/react-redux-observable-github-search.git
 $ cd react-redux-observable-github-search
 $ npm i
+$ echo NODE_ENV=development >> .env
 $ npm start
 ```
 
