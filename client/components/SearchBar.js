@@ -61,7 +61,7 @@ class SearchBar extends PureComponent {
                                               onMouseLeave={ () => this.handleMouseEnterAndLeave(false) }>
 
                                 <Glyphicon className='input-icon'                                            
-                                           glyph={ this.state.iconHovered ? 'remove' : 'search' } />
+                                    glyph={ this.state.iconHovered || this.state.searchLength  ? 'remove' : 'search' } />
                                            
                             </InputGroup.Addon>
 

@@ -8,11 +8,18 @@ import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 import { List, ListItem } from 'material-ui/List';
 
-import { setSearching } from '../actions';
-
 class SearchResults extends PureComponent {
     constructor(props) {
         super(props);
+    }
+
+    renderInitialContent() {
+        return (
+            <div className='initial-content-container'>
+                <img src='/images/github.png' />
+                <h4>Welcome! You can search for GitHub users with the search bar above.</h4>
+            </div>
+        );  
     }
 
     renderUsers(users) {
@@ -32,7 +39,10 @@ class SearchResults extends PureComponent {
             <div className='search-results-container'>
                 <Paper className={ `search-result-paper${this.props.isSearching ? ' is-searching' : ''}` } 
                        zDepth={ 1 }>
-                    { this.props.githubUsers.length && !this.props.isSearching ? 
+                    
+                       { !this.props.hasSearched ?  this.renderInitialContent()  : <span></span> }
+                    
+                    { this.props.githubUsers.length && !this.props.isSearching && this.props.hasSearched ? 
                                                         <h5 className='text-right margin-right-sm'>
                                                          { `${this.props.githubUsers.length} 
                                                             GitHub 
@@ -42,7 +52,7 @@ class SearchResults extends PureComponent {
                                                     : <span></span> }
                     <List>
                         { this.props.githubUsers.length && !this.props.isSearching ? this.renderUsers(this.props.githubUsers) : <span></span> }
-                        { !this.props.isSearching && !this.props.githubUsers.length ? <h2>No Results</h2> : <span></span>  }
+                        { !this.props.isSearching && !this.props.githubUsers.length && this.props.hasSearched ? <h2>No Results</h2> : <span></span>  }
                         { this.props.isSearching ? <LoadingSpinner/> : <span></span>  }
                     </List>
                 </Paper>
@@ -53,5 +63,6 @@ class SearchResults extends PureComponent {
 
 export default connect(({ githubUsers }) => ({ 
                                                 githubUsers: githubUsers.users, 
-                                                isSearching: githubUsers.isSearching 
-                                            }), { setSearching })(SearchResults);
+                                                isSearching: githubUsers.isSearching, 
+                                                hasSearched: githubUsers.hasSearched 
+                                            }))(SearchResults);

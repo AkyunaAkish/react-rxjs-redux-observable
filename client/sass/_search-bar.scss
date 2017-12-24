@@ -16,7 +16,12 @@
 
         .hovered-icon-container {
             &:hover {
-              cursor: pointer;
+              cursor: pointer !important;
+              * {
+                    &:hover {
+                        cursor: pointer !important;
+                    }
+              }
             }
         }
 
