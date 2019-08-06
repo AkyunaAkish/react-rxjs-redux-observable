@@ -69,7 +69,7 @@ class SearchBar extends PureComponent {
                                          type='text' 
                                          inputRef={ (el) => this.search = el } 
                                          onChange={ (event) => this.handleSearch(event.target.value) }
-                                         placeholder='Search by GitHub Username'/>
+                                         placeholder='Search GitHub Users'/>
                         </InputGroup>
                     </FormGroup>
                  }/>
