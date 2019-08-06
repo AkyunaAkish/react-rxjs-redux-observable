@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./client/index.js",
-  "homepage": "https://akyunaakish.github.io/react-redux-observable-github-search/",
+  "homepage": ".",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --progress --colors",
     "build": "webpack -p",
