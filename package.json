@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "./client/index.js",
+  "homepage": "https://akyunaakish.github.io/react-redux-observable-github-search/",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --progress --colors",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "predeploy": "webpack -p",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -55,6 +58,7 @@
     "webpack-notifier": "^1.5.0"
   },
   "dependencies": {
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "gh-pages": "^2.1.0"
   }
 }
